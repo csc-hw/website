@@ -247,6 +247,10 @@ footer.absolute {
   border-color: #000;
 }
 
+.button:visited {
+  color: #fff;
+}
+
  /* Utility Classes
   ––––––––––––––––––––––––––*/
 .u-cf:after {
