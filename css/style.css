@@ -245,6 +245,7 @@ footer.absolute {
 .button:hover, .button:focus {
   color: #000;
   border-color: #000;
+  transition: border-color .15s ease-in;
 }
 
 .button:visited {
