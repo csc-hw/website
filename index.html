@@ -3,21 +3,74 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>mason</title>
-    <meta name="author" content="mason">
-    <meta name="description" content="mason">
-    <link rel="stylesheet" href="https://rawgit.com/kjhx/francisco/master/francisco.css" />
-    <link rel="stylesheet" href="css/base.css">
+    <title>francisco</title>
+    <meta name="author" content="Kyle Huggins">
+    <meta name="description" content="comp250: project one">
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/kjhx/francisco/v1.1/francisco.css">-->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      /* Jumbotron
+      ––––––––––––––––––––––––––*/
+      .jumbotron {
+        display: table;
+        background-color: #000;
+        background-image: url(media/ales-nesetril.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .jumbotron div[frame]{
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+
+      .jumbotron div[frame] h1 { font-size: 6.2rem; }
+      .jumbotron div[frame] h2 { margin-top: .2rem; }
+
+      /* Header + Footer Tweaks
+      ––––––––––––––––––––––––––*/
+      header nav {
+        z-index: 999;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      footer div[frame] {
+        margin-top: 0;
+        border-top-width: 0;
+      }
+
+      footer { border-top-style: none; }
+    </style>
   </head>
   <!---->
   <body>
-    <div class="frame">
-      <h2>this is mason,</h2>
-      <p>a barebones template ideal for jumpstarting tiny projects.</p>
-      <p>mason includes <a href="http://francisco.huggins.io">francisco</a> and jQuery via cdnjs.</p>
+    <!---->
+    <header>
+      <div frame>
+        <nav strong>
+          <a href="index.html">francisco <small>v1.1</small></a>
+          <a href="about.html">About</a>
+          <a href="docs.html">Documentation</a>
+          <a href="features.html">Features</a>
+          </nav
+        </div>
+    </header>
+    <!---->
+    <div class="jumbotron">
+      <div frame>
+        <h1>Purpose built. Design focused.</h1>
+        <h2>a minimal css framework for the modern web.</h2>
+        <br>
+        <a class="button" href="docs.html">get started</a>
+        <a class="button" href="http://github.com/kjhx/francisco">goto github</a>
+      </div>
     </div>
+    <!---->
   </body>
   <!---->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="js/base.js"></script>
 </html>

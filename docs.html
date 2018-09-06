@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>francisco - docs</title>
+    <meta name="author" content="Kyle Huggins">
+    <meta name="description" content="comp250: project one">
+    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/kjhx/francisco/v1.1/francisco.css">-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <!---->
+  <body>
+    <!---->
+    <header>
+      <div frame>
+        <nav strong>
+          <a href="index.html">francisco <small>v1.1</small></a>
+          <a href="about.html">About</a>
+          <a href="docs.html">Documentation</a>
+          <a href="features.html">Features</a>
+          </nav
+        </div>
+    </header>
+    <!---->
+    <div frame>
+      <h3>documentation</h3>
+      <!---->
+      <h2>Getting Started</h2>
+      <div row>
+        <p>To start developing with francisco, all you need to do is link the current stylesheet:</p>
+        <pre>
+          <code>
+            &lt;link rel="stylesheet" href="https://cdn.rawgit.com/kjhx/francisco/v1.1/francisco.css"&gt;
+          </code>
+        </pre>
+        <p>That's it! All there's left to do is read the rest of the documentation.</p>
+      </div>
+      <!---->
+      <h2>Typography</h2>
+      <div row>
+        <div double>
+          <p>The default typeface is determined by the browser and the operating system, helping create a more comfortable viewing experience. Using the system provided fonts often makes a webpage feel more like it fits in with other UI your device. Additionally, relying on system provided fonts vastly improves webpage performance.</p>
+          <p>All type is set in rems so that a single property, <code>html</code> font-size, can be used to globally modify all type and spacing. Obviously, both <em>emphasis</em> and <strong>strong</strong> text is supported.</p>
+        </div>
+        <div column>
+          <h1>Heading 1<small class="type-rems">4.2rem</small></h1>
+          <h2>Heading 2<small class="type-rems">3.6rem</small></h2>
+          <h3>Heading 3<small class="type-rems">1.5rem</small></h3>
+        </div>
+      </div>
+      <!---->
+      <h2>Grid</h2>
+      <div row>
+        <div double>
+          <p>Francisco uses a flexible, fully responsive three column grid system. You build up the grid by placing <code>&lt;div column&gt;</code> tags inside of a <code>&lt;div row&gt;</code>. You'll typically want to place these (or your whole webpage) inside of a<code>&lt;div frame&gt;</code>, which acts as a formatted container. This is what the standard three column grid looks like:</p>
+        </div>
+      </div>
+      <div row>
+        <div column border>
+          <h3>column</h3>
+        </div>
+        <div column border>
+          <h3>column</h3>
+        </div>
+        <div column border>
+          <h3>column</h3>
+        </div>
+      </div>
+      <pre>
+        <code>
+          &lt;div row&gt;
+            &lt;div column&gt;
+              &lt;h3&gt;column&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div column&gt;
+              &lt;h3&gt;column&lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div column&gt;
+              &lt;h3&gt;column&lt;/h3&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        </code>
+      </pre>
+      <div row>
+        <div double>
+          <p>We can also use the second type of column to take up two columns worth of space, creating a 60/40 split. All you have to do is replace the <code>column</code> attribute with <code>double</code>. This works in both orientations:</p>
+        </div>
+      </div>
+      <div row>
+        <div double border>
+          <h3>double</h3>
+        </div>
+        <div column border>
+          <h3>column</h3>
+        </div>
+      </div>
+      <br>
+      <div row>
+        <div column border>
+          <h3>column</h3>
+        </div>
+        <div double border>
+          <h3>double</h3>
+        </div>
+      </div>
+      <!---->
+      <h2>Navigation</h2>
+      <div row>
+        <div double>
+          <p>You can create simple horizontal navigation with the <code>&lt;nav&gt;</code> tag. By using a <code>&lt;nav strong&gt;</code>tag, the first link will become bolder and darker than the rest of the navigation, making a title of sorts.</p>
+          <p>Additionally, you can use the <code>&lt;nav vertical&gt;</code> tag to create a vertical navigation with the same properties as the above. </p>
+        </div>
+      </div>
+      <nav strong>
+        <a href="#" title="Title">Title</a>
+        <a href="#" title="Page One">Page One</a>
+        <a href="#" title="Page Two">Page Two</a>
+      </nav>
+      <div row>
+        <div double>
+          <pre>
+            <code>
+              &lt;nav strong&gt;
+              &lt;a href="#" title="Title">Title&lt;/a&gt;
+              &lt;a href="#" title="Page One"&gt;Page One&lt;/a&gt;
+              &lt;a href="#" title="Page Two"&gt;Page Two&lt;/a&gt;
+              &lt;/nav&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+      <!---->
+      <h2>Code</h2>
+      <div row>
+        <div double>
+          <p>Both inline code and complete code blocks are supported. Just wrap whatever you need in <code>&lt;code&gt;</code> tags, or wrap those in <code>&lt;pre&gt;</code> tags for a block.</p>
+          <p>Code blocks do wrap on smaller screens &mdash; this is necessary to prevent breaking the entire mobile experience.</p>
+        </div>
+      </div>
+      <div row>
+        <div double>
+          <pre>
+            <code>
+              &lt;pre&gt;
+                &lt;code&gt;
+                  &lt;!-- wow this is meta --&gt;
+                &lt;/code&gt;
+              &lt;/pre&gt;
+            </code>
+          </pre>
+        </div>
+      </div>
+      <!---->
+      <h2>Things of note</h2>
+      <div row>
+        <div double>
+          <table>
+            <ul>
+              <li><strong>Global attribution</strong></li>
+              <li><strong>Link colors</strong></li>
+            </ul>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!---->
+    <footer>
+      <div frame>
+        <nav class="u-cf" vertical>
+          <a href="#">&copy; 2018 @kjhx</a>
+          <a href="#">View on GitHub</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+  <!---->
+</html>
