@@ -1,25 +1,25 @@
 /*
- * francisco v1.1
- * a project by @hugginsio
+ * francisco v1.3.1
+ * a project by @kjhx
  *
  * Licensed under MIT
  */
 
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
 /* Type
  –––––––––––––––––––––––*/
-html { font-size: 62.5%; }
-
 body {
- font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', helvetica, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
  font-weight: 400;
- font-size: 1.5em;
+ font-size: 1.5em; /* chromium #319623 */
  line-height: 1.6;
 }
 
-h1, h2, h3 {
- font-weight: 700;
- margin-bottom: 2rem;
-}
+h1, h2, h3 { font-weight: 700; }
 
 h1 {
  font-size: 4.2rem;
@@ -40,25 +40,21 @@ h3 {
 
 /* Grid
  –––––––––––––––––––––––*/
-html { box-sizing: border-box; }
-
-*, *::before, *::after {
-  box-sizing: inherit;
-}
+*, *::before, *::after { box-sizing: inherit; }
 
 div[frame], div.frame {
   position: relative;
-  width: 100%;
   max-width: 1140px;
+  width: 100%;
   margin: auto;
 }
 
-div[column], div[double], div.column, div.double {
-  width: 100%;
+div[column], div[double], div[half], div.column, div.double, div.half {
   float: left;
+  width: 100%;
 }
 
-div[column]:first-child, div[double]:first-child, div.column:first-child, div.double:first-child {
+div[column]:first-child, div[double]:first-child, div[half]:first-child, div.column:first-child, div.double:first-child, div.half:first-child {
   margin-left: 0;
 }
 
@@ -69,10 +65,10 @@ div[column]:first-child, div[double]:first-child, div.column:first-child, div.do
 @media (min-width: 768px) {
   div[frame], div.frame { width: 80%; }
 
-  div[row] {
+  div[row], div.row {
+    display: table;
     max-width: 1140px;
     width: 100%;
-    display: table;
     clear: both;
   }
 
@@ -85,21 +81,16 @@ div[column]:first-child, div[double]:first-child, div.column:first-child, div.do
     margin-left: 2%;
     width: 66%;
   }
-}
 
-/* Media
- –––––––––––––––––––––––*/
-a, a:visited {
-  color: #ef5350;
-  text-decoration: none;
-  transition: color .15s ease-in;
+  div[half], div.half {
+    margin-left: 2%;
+    width: 49%;
+  }
 }
-
-a:hover { color: #ff867c; }
 
 /* Navigation
  –––––––––––––––––––––––*/
-nav { padding: 1.5rem 1.5rem 1.5rem 0; }
+nav { padding: 1.5rem 0 1.5rem 0; }
 
 nav a, nav a:visited {
   display: inline-block;
@@ -116,22 +107,30 @@ nav[strong] a:first-child {
 }
 
 nav[vertical] a {
+  display: table;
   margin-left: 0;
   margin-top: 1rem;
-  display: table;
 }
 
-nav[vertical] a:first-child { margin-top: 0;}
+nav[vertical] a:first-child { margin-top: 0; }
 
-/* Other
+a, a:visited {
+  color: #ef5350;
+  text-decoration: none;
+  transition: color .15s ease-in;
+}
+
+a:hover { color: #ff867c; }
+
+/* Misc.
  –––––––––––––––––––––––*/
 code {
+  padding: .2rem .5rem;
+  margin: 0 .2rem;
   font-family: monospace;
   background: #F1F1F1;
   border: 1px solid #E1E1E1;
   border-radius: 4px;
-  padding: .2rem .5rem;
-  margin: 0 .2rem;
 }
 
 pre code {
@@ -146,20 +145,18 @@ hr { margin-top: -1em; }
  *
  */
 
-/* francisco dark theme + 1.1 bug fixes
+/* francisco dark theme
  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––*/
 html, body {
   background-color: #000;
   color: #fff;
 }
 
-nav a, nav a:visited { color: #ccc; }
+nav a, nav a:visited { color: #ddd; }
 
 nav a:hover { color: #fff; }
 
 nav[strong] a:first-child { color: #fff; }
-
-nav { padding: 1.5rem 0rem 1.5rem 0rem; /* francisco bug */ }
 
 code {
   background: #424242;
@@ -168,6 +165,7 @@ code {
 
 /* Page Structure
  ––––––––––––––––––––––––––*/
+html { margin-left: calc(100vw - 100%); } /* this fix for scrollbar jumping makes me far happier than it should. */
 body { margin: 0; }
 
 h1, h2, h3 { margin-bottom: 0;}
@@ -206,21 +204,26 @@ footer div[frame] {
   border-top-style: solid;
   border-top-width: .125rem;
   border-top-color: #888;
+  margin-top: 4rem;
+  padding-bottom: 2rem;
 }
 
-footer div[frame] nav a:last-child {
-  float: right;
+footer div[frame] a, a:visited {
+  color: #ddd;
 }
 
-footer div[frame] nav a {
-  float: left;
-  margin: 0;
+footer div[frame] a:hover {
+  color: #fff;
 }
 
-footer.absolute {
-  z-index: 999;
-  position: absolute;
-  bottom: 0;
+footer div[frame] {
+  color: #ddd;
+}
+
+footer div[frame] h2 { font-size: 2.6rem; }
+footer div[frame] i {
+  margin-top: 1rem;
+  margin-right: 2rem;
 }
 
  /* Buttons
@@ -260,6 +263,8 @@ footer.absolute {
   height: 0;
   clear: both;
 }
+
+.u-text-right { text-align: right; }
 
 /* Miscellaneous
  ––––––––––––––––––––––––––*/
