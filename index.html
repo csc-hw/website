@@ -6,7 +6,6 @@
     <title>francisco</title>
     <meta name="author" content="Kyle Huggins">
     <meta name="description" content="comp250: project one">
-    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/kjhx/francisco/v1.1/francisco.css">-->
     <link rel="stylesheet" href="css/style.css">
     <style>
       /* Jumbotron
@@ -27,14 +26,14 @@
             to   { opacity: 1; }
         }
 
-      .jumbotron div[frame]{
+      .jumbotron div.frame{
         display: table-cell;
         text-align: center;
         vertical-align: middle;
       }
 
-      .jumbotron div[frame] h1 { font-size: 6.2rem; }
-      .jumbotron div[frame] h2 { margin-top: .4rem; }
+      .jumbotron div.frame h1 { font-size: 6.2rem; }
+      .jumbotron div.frame h2 { margin-top: .4rem; }
 
       /* Header + Footer Tweaks
       ––––––––––––––––––––––––––*/
@@ -45,9 +44,9 @@
         width: 100%;
       }
 
-      footer { margin-top: -1rem; }
+      footer { margin-top: -4rem; }
 
-      footer div[frame] { border-top: none; }
+      footer div.frame { border-top: none; }
 
       footer { background-color: #1b1b1b; }
     </style>
@@ -56,8 +55,8 @@
   <body>
     <!---->
     <header>
-      <div frame>
-        <nav strong>
+      <div class="frame">
+        <nav class="strong">
           <a href="index.html">francisco <small>v1.3.1</small></a>
           <a href="about.html">About</a>
           <a href="docs.html">Documentation</a>
@@ -67,7 +66,7 @@
     </header>
     <!---->
     <div class="jumbotron">
-      <div frame>
+      <div class="frame">
         <h1>Purpose built. Design focused.</h1>
         <h2>a minimal css framework for the modern web.</h2>
         <br>
@@ -77,9 +76,9 @@
     </div>
     <!---->
     <footer>
-      <div frame>
-        <div row>
-          <div half>
+      <div class="frame">
+        <div class="row">
+          <div class="half">
             <h2><a href="mailto:kyle@huggins.io">kyle@huggins.io</a></h2>
             <h3>&copy; 2018 KJHX</h3>
           </div>

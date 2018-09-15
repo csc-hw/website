@@ -14,21 +14,21 @@
   <body>
     <!---->
     <header>
-      <div frame>
-        <nav strong>
+      <div class="frame">
+        <nav class="strong">
           <a href="index.html">francisco <small>v1.3.1</small></a>
           <a href="about.html">About</a>
           <a href="docs.html">Documentation</a>
           <a href="features.html">Features</a>
-          </nav
-        </div>
+        </nav>
+      </div>
     </header>
     <!---->
-    <div frame>
+    <div class="frame">
       <h3>documentation</h3>
       <!---->
       <h2>Getting Started</h2>
-      <div row>
+      <div class="row">
         <p>To start developing with francisco, all you need to do is link the current stylesheet:</p>
         <pre>
           <code>
@@ -39,32 +39,32 @@
       </div>
       <!---->
       <h2>Typography</h2>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="column">
           <p>The default typeface is determined by the browser and the operating system, helping create a more comfortable viewing experience. Using the system provided fonts often makes a webpage feel more like it fits in with other UI your device. Additionally, relying on system provided fonts vastly improves webpage performance.</p>
           <p>All type is set in rems so that a single property, <code>html</code> font-size, can be used to globally modify all type and spacing. Obviously, both <em>emphasis</em> and <strong>strong</strong> text is supported.</p>
         </div>
-        <div column>
-          <h1>Heading 1<small class="type-rems">4.2rem</small></h1>
-          <h2>Heading 2<small class="type-rems">3.6rem</small></h2>
-          <h3>Heading 3<small class="type-rems">1.5rem</small></h3>
+        <div class="column">
+          <h1>Heading 1<small class="type-rems">4.4rem</small></h1>
+          <h2>Heading 2<small class="type-rems">3.8rem</small></h2>
+          <h3>Heading 3<small class="type-rems">1.6rem</small></h3>
         </div>
       </div>
       <!---->
       <h2>Grid</h2>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <p>Francisco uses a flexible, fully responsive three column grid system. You build up the grid by placing <code>&lt;div column&gt;</code> tags inside of a <code>&lt;div row&gt;</code>. You'll typically want to place these (or your whole webpage) inside of a<code>&lt;div frame&gt;</code>, which acts as a formatted container. This is what the standard three column grid looks like:</p>
         </div>
       </div>
-      <div row>
-        <div column border>
+      <div class="row">
+        <div class="column border">
           <h3>column</h3>
         </div>
-        <div column border>
+        <div class="column border">
           <h3>column</h3>
         </div>
-        <div column border>
+        <div class="column border">
           <h3>column</h3>
         </div>
       </div>
@@ -83,43 +83,43 @@
           &lt;/div&gt;
         </code>
       </pre>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <p>We can also use the second type of column to take up two columns worth of space, creating a 60/40 split. All you have to do is replace the <code>column</code> attribute with <code>double</code>. This works in both orientations:</p>
         </div>
       </div>
-      <div row>
-        <div double border>
+      <div class="row">
+        <div class="double border">
           <h3>double</h3>
         </div>
-        <div column border>
+        <div class="column border">
           <h3>column</h3>
         </div>
       </div>
       <br>
-      <div row>
-        <div column border>
+      <div class="row">
+        <div class="column border">
           <h3>column</h3>
         </div>
-        <div double border>
+        <div class="double border">
           <h3>double</h3>
         </div>
       </div>
       <!---->
       <h2>Navigation</h2>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <p>You can create simple horizontal navigation with the <code>&lt;nav&gt;</code> tag. By using a <code>&lt;nav strong&gt;</code>tag, the first link will become bolder and darker than the rest of the navigation, making a title of sorts.</p>
           <p>Additionally, you can use the <code>&lt;nav vertical&gt;</code> tag to create a vertical navigation with the same properties as the above. </p>
         </div>
       </div>
-      <nav strong>
+      <nav class="strong">
         <a href="#" title="Title">Title</a>
         <a href="#" title="Page One">Page One</a>
         <a href="#" title="Page Two">Page Two</a>
       </nav>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <pre>
             <code>
               &lt;nav strong&gt;
@@ -133,14 +133,14 @@
       </div>
       <!---->
       <h2>Code</h2>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <p>Both inline code and complete code blocks are supported. Just wrap whatever you need in <code>&lt;code&gt;</code> tags, or wrap those in <code>&lt;pre&gt;</code> tags for a block.</p>
           <p>Code blocks do wrap on smaller screens &mdash; this is necessary to prevent breaking the entire mobile experience.</p>
         </div>
       </div>
-      <div row>
-        <div double>
+      <div class="row">
+        <div class="double">
           <pre>
             <code>
               &lt;pre&gt;
@@ -153,26 +153,81 @@
         </div>
       </div>
       <!---->
-      <h2>Things of note</h2>
-      <div row>
-        <div double>
-          <table>
-            <ul>
-              <li><strong>Global attribution</strong></li>
-              <li><strong>Link colors</strong></li>
-            </ul>
+      <h2>Utilities</h2>
+      <div class="row">
+        <div class="double">
+          <p>Included are a handful of utility classes to make dealing with floats, clearing, and tables a little easier. The current ones are <code>u-fl-right</code>, <code>u-fl-left</code>, <code>u-cf</code>, and <code>u-table-odd</code>.</p>
+          <p>These will float right, float left, and clear floats respectively. The fourth is used on every odd row of a table to highlight it, like so:</p>
+          <table class="u-full-width">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Timothy Halloway</td>
+                <td>19</td>
+                <td>St. Louis</td>
+              </tr>
+              <tr class="u-table-odd">
+                <td>Zach Halvorson</td>
+                <td>21</td>
+                <td>Friendswood</td>
+              </tr>
+              <tr>
+                <td>Noah Lockhart</td>
+                <td>19</td>
+                <td>Kansas City</td>
+              </tr>
+              <tr class="u-table-odd">
+                <td>Alex Ohrmundt</td>
+                <td>20</td>
+                <td>Houston</td>
+              </tr>
+              <tr>
+                <td>Ellen Finke</td>
+                <td>19</td>
+                <td>Taipei</td>
+              </tr>
+            </tbody>
           </table>
+        </div>
+      </div>
+      <!---->
+      <h2>Things of note</h2>
+      <div class="row">
+        <div class="double">
+          <ul>
+            <li><strong>Global attribution</strong>
+              <ul>
+                <li>Element declaration was intended to be used outside of the class attribute (such as <code>&lt;div frame&gt;</code> and <code>&lt;div column&gt;</code>), you can still declare their class normally as<code>&lt;div class="frame"&gt;</code>.</li>
+              </ul>
+            </li>
+            <li><strong>Link colors</strong>
+              <ul>
+                <li>Links are recolored and animated with fade-in by default. In the light themed variant this translates to a light red, while in the dark theme this translates to light blue.</li>
+              </ul>
+            </li>
+            <li><strong>Utility classes</strong>
+              <ul>
+                <li>The utility classes listed above are not actually a part of the framework. That was only added to fulfill an assignment requirement for including a table.</li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
     <!---->
     <footer>
-      <div frame>
-        <div row>
-          <div half>
-            <p><a href="http://github/kjhx/francisco"><i class="fab fa-github fa-2x"></i></a><a href="#"><i class="fas fa-bug fa-2x"></i><a><a href="#"><i class="fas fa-envelope fa-2x"></i></a></p>
+      <div class="frame">
+        <div class="row">
+          <div class="half">
+            <p><a href="http://github.com/kjhx/francisco"><i class="fab fa-github fa-2x"></i></a><a href="#"><i class="fas fa-bug fa-2x"></i></a><a href="#"><i class="fas fa-envelope fa-2x"></i></a></p>
           </div>
-          <div class="u-text-right" half>
+          <div class="half u-text-right">
             <h3>&copy; 2018 KJHX</h3>
           </div>
         </div>
