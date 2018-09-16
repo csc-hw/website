@@ -26,6 +26,14 @@
     <!---->
     <div class="frame">
       <h3>documentation</h3>
+      <nav>
+        <a href="#typography">Typography</a>
+        <a href="#grid">Grid</a>
+        <a href="#navigation">Navigation</a>
+        <a href="#code">Code</a>
+        <a href="#utilities">Utilities</a>
+        <a href="#notes">Notes</a>
+      </nav>
       <!---->
       <h2>Getting Started</h2>
       <div class="row">
@@ -38,7 +46,7 @@
         <p>That's it! All there's left to do is read the rest of the documentation.</p>
       </div>
       <!---->
-      <h2>Typography</h2>
+      <h2 id="typography">Typography</h2>
       <div class="row">
         <div class="column">
           <p>The default typeface is determined by the browser and the operating system, helping create a more comfortable viewing experience. Using the system provided fonts often makes a webpage feel more like it fits in with other UI your device. Additionally, relying on system provided fonts vastly improves webpage performance.</p>
@@ -51,7 +59,7 @@
         </div>
       </div>
       <!---->
-      <h2>Grid</h2>
+      <h2 id="grid">Grid</h2>
       <div class="row">
         <div class="double">
           <p>Francisco uses a flexible, fully responsive three column grid system. You build up the grid by placing <code>&lt;div column&gt;</code> tags inside of a <code>&lt;div row&gt;</code>. You'll typically want to place these (or your whole webpage) inside of a<code>&lt;div frame&gt;</code>, which acts as a formatted container. This is what the standard three column grid looks like:</p>
@@ -106,7 +114,7 @@
         </div>
       </div>
       <!---->
-      <h2>Navigation</h2>
+      <h2 id="navigation">Navigation</h2>
       <div class="row">
         <div class="double">
           <p>You can create simple horizontal navigation with the <code>&lt;nav&gt;</code> tag. By using a <code>&lt;nav strong&gt;</code>tag, the first link will become bolder and darker than the rest of the navigation, making a title of sorts.</p>
@@ -132,7 +140,7 @@
         </div>
       </div>
       <!---->
-      <h2>Code</h2>
+      <h2 id="code">Code</h2>
       <div class="row">
         <div class="double">
           <p>Both inline code and complete code blocks are supported. Just wrap whatever you need in <code>&lt;code&gt;</code> tags, or wrap those in <code>&lt;pre&gt;</code> tags for a block.</p>
@@ -153,51 +161,93 @@
         </div>
       </div>
       <!---->
-      <h2>Utilities</h2>
+      <h2 id="utilities">Utilities</h2>
       <div class="row">
         <div class="double">
           <p>Included are a handful of utility classes to make dealing with floats, clearing, and tables a little easier. The current ones are <code>u-fl-right</code>, <code>u-fl-left</code>, <code>u-cf</code>, and <code>u-table-odd</code>.</p>
           <p>These will float right, float left, and clear floats respectively. The fourth is used on every odd row of a table to highlight it, like so:</p>
-          <table class="u-full-width">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="u-table-odd">
-                <td>Timothy Halloway</td>
-                <td>19</td>
-                <td>St. Louis</td>
-              </tr>
-              <tr>
-                <td>Zach Halvorson</td>
-                <td>21</td>
-                <td>Friendswood</td>
-              </tr>
-              <tr class="u-table-odd">
-                <td>Noah Lockhart</td>
-                <td>19</td>
-                <td>Kansas City</td>
-              </tr>
-              <tr>
-                <td>Alex Ohrmundt</td>
-                <td>20</td>
-                <td>Houston</td>
-              </tr>
-              <tr class="u-table-odd">
-                <td>Ellen Finke</td>
-                <td>19</td>
-                <td>Taipei</td>
-              </tr>
-            </tbody>
-          </table>
+        </div>
+        <div class="row">
+          <div class="half">
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="u-table-odd">
+                  <td>Timothy Halloway</td>
+                  <td>19</td>
+                  <td>St. Louis</td>
+                </tr>
+                <tr>
+                  <td>Zach Halvorson</td>
+                  <td>21</td>
+                  <td>Friendswood</td>
+                </tr>
+                <tr class="u-table-odd">
+                  <td>Noah Lockhart</td>
+                  <td>19</td>
+                  <td>Kansas City</td>
+                </tr>
+                <tr>
+                  <td>Alex Ohrmundt</td>
+                  <td>20</td>
+                  <td>Houston</td>
+                </tr>
+                <tr class="u-table-odd">
+                  <td>Ellen Finke</td>
+                  <td>19</td>
+                  <td>Taipei</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="half">
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Timothy Halloway</td>
+                  <td>19</td>
+                  <td>St. Louis</td>
+                </tr>
+                <tr>
+                  <td>Zach Halvorson</td>
+                  <td>21</td>
+                  <td>Friendswood</td>
+                </tr>
+                <tr>
+                  <td>Noah Lockhart</td>
+                  <td>19</td>
+                  <td>Kansas City</td>
+                </tr>
+                <tr>
+                  <td>Alex Ohrmundt</td>
+                  <td>20</td>
+                  <td>Houston</td>
+                </tr>
+                <tr>
+                  <td>Ellen Finke</td>
+                  <td>19</td>
+                  <td>Taipei</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
       <!---->
-      <h2>Things of note</h2>
+      <h2 id="notes">Things of note</h2>
       <div class="row">
         <div class="double">
           <ul>
@@ -208,12 +258,12 @@
             </li>
             <li><strong>Link colors</strong>
               <ul>
-                <li>Links are recolored and animated with fade-in by default. In the light themed variant this translates to a light red, while in the dark theme this translates to light blue.</li>
+                <li>Links are recolored and animated with a fade-in effect by default. In the light themed variant this translates to a light red, while in the dark theme this translates to light blue.</li>
               </ul>
             </li>
             <li><strong>Utility classes</strong>
               <ul>
-                <li>The utility classes listed above are not actually a part of the framework. That was only added to fulfill an assignment requirement for including a table.</li>
+                <li>The utility classes listed above are not actually a part of the framework. That was only added to the base css to fulfill an assignment requirement for including tables.</li>
               </ul>
             </li>
           </ul>

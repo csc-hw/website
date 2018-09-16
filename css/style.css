@@ -114,6 +114,8 @@ nav[vertical] a, nav.vertical a {
 
 nav[vertical] a:first-child, nav.vertical a:first-child { margin-top: 0; }
 
+nav a:first-child { margin-left: 0; }
+
 a, a:visited {
   color: #ef5350;
   text-decoration: none;
