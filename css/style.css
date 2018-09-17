@@ -254,10 +254,6 @@ footer .frame i {
   border: 1px solid #fff;
 }
 
-.button:visited {
-  color: #fff;
-}
-
 .button:hover, .button:focus {
   color: #000;
   border-color: #000;
