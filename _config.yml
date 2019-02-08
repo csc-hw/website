@@ -1,0 +1,11 @@
+title: "francisco"
+author: "Kyle Huggins"
+description: >- # this means to ignore newlines until "baseurl:"
+  comp250: project one
+baseurl: "/~khuggins/website/"
+url: "http://taz.harding.edu"
+
+# Build settings
+exclude: ["Makefile", "README.md", "Gemfile", "Gemfile.lock"]
+markdown: kramdown
+highlighter: none
